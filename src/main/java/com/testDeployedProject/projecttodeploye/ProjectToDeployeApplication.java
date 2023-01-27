@@ -26,11 +26,11 @@ public class ProjectToDeployeApplication extends SpringBootServletInitializer {
 
     @GetMapping("/")
     public String myTestMethod() {
-        return "THIS IS WORKING FINE SHIVAY";
+        return "DEAR SHIVAY, THE CHANGES ARE MADE";
     }
 
     @RequestMapping("/shivay")
     public String myTestMethod2() {
-        return "THIS IS WORKING FINE 2nd SHIVAY";
+        return "YES THE CHANGES ARE MADE";
     }
 }
