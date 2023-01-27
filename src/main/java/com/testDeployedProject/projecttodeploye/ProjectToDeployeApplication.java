@@ -26,7 +26,7 @@ public class ProjectToDeployeApplication extends SpringBootServletInitializer {
 
     @GetMapping("/")
     public String myTestMethod() {
-        return "These are the final changes";
+        return "Running through token";
     }
 
     @RequestMapping("/shivay")
