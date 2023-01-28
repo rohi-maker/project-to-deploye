@@ -19,6 +19,7 @@ pipeline{
         stage('Deploying'){
             steps{
                 echo "DEPLOYING THE PORJECT"
+                deploy adapters: [tomcat9(credentialsId: 'f2603a18-09bf-4455-9bbe-49e670ffc553', path: '', url: 'http://localhost:8006')], contextPath: '/myapp', war: '**/*.war'
             }
         }
     }
