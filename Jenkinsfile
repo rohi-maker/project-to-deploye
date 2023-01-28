@@ -1,21 +1,22 @@
 pipeline{
     agent any
+    tools{
+        maven 'Maven'
+    }
     stages{
         stage('Testing'){
             steps{
-                echo "TESTING THE PORJECT"
+                echo "PERFORMING TESTS ON PROJECT"
+                bat 'mvn test'
             }
         }
         stage('Building'){
             steps{
-                echo "BUILDING THE PORJECT"
+                echo "PERFORMING TESTS ON PROJECT"
+                bat 'mvn install'
             }
         }
         stage('Deploying'){
-            input{
-                message "WANT TO DEPLOYE PROJECT"
-                ok "YES"
-            }
             steps{
                 echo "DEPLOYING THE PORJECT"
             }
